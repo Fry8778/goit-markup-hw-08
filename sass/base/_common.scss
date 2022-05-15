@@ -1,0 +1,29 @@
+body {
+    font-family: "Roboto", 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.03em;
+    background-color: var(--primery-white-color);
+    color: var(--primery-text-color);
+
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+.text-black {
+    color: var(--title-text-color);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
