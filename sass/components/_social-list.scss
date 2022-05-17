@@ -46,18 +46,16 @@
 
 }
 
-.section-people {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 94px;
-    padding-bottom: 94px;
-    background-color: var(--background-color);
-}
 
 .staff {
     display: flex;
     list-style: none;
     margin-right: -30px;
+
+    @include mq (mob) {
+          display: flex;
+          flex-direction: column;
+        }
 }
 
 .staff-category {

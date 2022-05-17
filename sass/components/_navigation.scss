@@ -1,3 +1,9 @@
+.nav {
+    display: none;
+}
+
+
+
 .nav__list {
     display: flex;
     margin-left: 92px;
@@ -54,7 +60,10 @@
 /*Auth-nav*/
 
 .contacts {
-    display: flex;
+    display: none;
+
+
+    // display: flex;
     margin-left: auto;
 
     & .item+.item {

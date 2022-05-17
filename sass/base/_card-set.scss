@@ -4,6 +4,15 @@
     margin-left: calc(-1 * var(--card-left));
     margin-top: calc(-1 * var(--card-top));
 
+
+    // @include mq(mob) {
+    //         --card-item: 1;
+    // }    
+
+    // @include mq(tab) {
+    //         --card-item: 2;
+    // }  
+
 }
 
 .card-item {

@@ -3,6 +3,21 @@
 .features {
     &__list {
         --card-item:4;
+
+
+        @include mq (mob) {
+            --card-item: 1;
+        }
+
+        @include mq(tab) {
+             --card-item: 2;
+        }
+
+         @include mq(tab) {
+             --card-item: 4;
+        }
+
+
     }
 
     &__card {
@@ -34,5 +49,6 @@
         letter-spacing: 0.03em;
         color: var(--primery-text-color);
          }
+
 
 }

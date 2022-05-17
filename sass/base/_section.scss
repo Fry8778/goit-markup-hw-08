@@ -15,3 +15,12 @@
     letter-spacing: 0.03em;
     color: var(--title-text-color);
 }
+
+
+.section-people {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: var(--background-color);
+}

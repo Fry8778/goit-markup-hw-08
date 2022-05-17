@@ -1,3 +1,14 @@
+.card-set-list {
+    @include mq(mob) {
+           --card-item: 1;
+    }
+
+    @include mq(tab) {
+            --card-item: 2;
+    }
+
+}
+
 .portfolio__text {
     display: flex;
     opacity: 0;

@@ -7,6 +7,12 @@
 .footer-container {
     display: flex;
     align-items: baseline;
+
+    // @include mq (mob) {
+    //     display: flex;
+    //     flex-direction: column;
+      
+    // }
 }
 
 .icon-foot {
