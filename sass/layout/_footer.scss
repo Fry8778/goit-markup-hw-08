@@ -8,9 +8,9 @@
   display: flex;
   
   @include mq(no-desk){
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 
   }
   @include mq(desk){

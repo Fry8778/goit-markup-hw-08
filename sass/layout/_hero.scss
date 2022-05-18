@@ -1,7 +1,7 @@
 .hero {
-    text-align: center;  
+    text-align: center;
     padding-top: 118px;
-    padding-bottom: 118px;   
+    padding-bottom: 118px;
 
     background-color: #2F303A;
     background-size: cover;
@@ -10,25 +10,58 @@
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url("../images/workspace.jpg");
+        url("../images/worcspace-mob1x.jpg");
+        @include mq(retina){
+            background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url("../images/worcspace-mob2x.jpg");
+        }
+
+        @include mq(tab){
+            background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url("../images/worcspace-tab1x.jpg");
+        @include mq(retina){
+            background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url("../images/worcspace-tab2x.jpg");
+        }
+        }
 
     @include mq (desk) {
         padding-top: 200px;
         padding-bottom: 200px;
         max-width: 1600px;
         margin: 0 auto;
-    }    
+        background-image: linear-gradient(to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+    url("../images/worcspace-desk1x.jpg");
+    @include mq(retina){
+        background-image: linear-gradient(to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+    url("../images/worcspace-desk2x.jpg");
+    }
+    }
 
 }
+
+
 
 .hero-title {
     display: block;
     box-sizing: border-box;
     margin-bottom: 30px;
     font-weight: 900;
-    min-width: 360px;
-    max-height: 164px;
-    
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+
+
     line-height: 1.62;
     text-align: center;
     text-transform: uppercase;
@@ -37,8 +70,8 @@
     color: var(--primery-white-color);
 
     @include mq (desk) {
-        min-width: 696px;
-        max-height: 120px;    
+        max-width: 696px;
+
         font-size: 44px;
         line-height: 1.36;
     }

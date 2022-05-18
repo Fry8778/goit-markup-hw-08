@@ -1,27 +1,27 @@
 .filter-list {
+
+    column-gap: 8px;
+    row-gap: 15px;
     margin-bottom: 40px;
-    display: flex;   
+    display: flex;
     flex-wrap: wrap;
-    
 
+    @include mq(tab) {
+        justify-content: center;
+    }
 
-
-        @include mq(desk) {
-            margin-bottom: 50px;
-            display: flex;
-            justify-content: center;
+    @include mq(desk) {
+        margin-bottom: 50px;
     }
 
 }
 
- .filter-item:not(:last-child) {
-     margin-right: 8px;
 
- }
 
 .filter-btn {
-    padding: 6px 22px;
 
+
+    padding: 6px 22px;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -37,10 +37,12 @@
     transition: box-shadow var(--transition), color var(--transition), background-color var(--transition);
 
     &:hover,
-        &:focus {
-            background-color: var(--accent-color);
-            color: var(--primery-white-color);
-            box-shadow: var(--filter-btn-box-shadow-color);
-        }
-}
+    &:focus {
+        background-color: var(--accent-color);
+        color: var(--primery-white-color);
+        box-shadow: var(--filter-btn-box-shadow-color);
+    }
 
+
+
+}
