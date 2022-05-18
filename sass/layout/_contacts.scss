@@ -1,29 +1,19 @@
 /*Constant clients*/
 
 .clients {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   --card-item:2;
+    @include mq(tab) {
+            --card-item: 3;
+        }
 
+                 @include mq(desk) {
+                     --card-item: 6;
+                 }
 }
 
-.section-constant {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.visitor {
-    flex-basis: calc(100% / 6 - 30px);
 
 
 
-    
-
-&:not(:last-child) {
-        margin-right: 30px;
-    }
-
-}
 
 .promo {
     fill: var(--border-icon-color);

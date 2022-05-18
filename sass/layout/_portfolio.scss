@@ -7,6 +7,10 @@
             --card-item: 2;
     }
 
+        @include mq(desk) {
+            --card-item: 3;
+        }
+
 }
 
 .portfolio__text {

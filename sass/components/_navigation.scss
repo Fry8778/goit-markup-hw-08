@@ -1,5 +1,10 @@
 .nav {
-    display: none;
+
+    @include mq(mob-only){
+        // display: none;
+    }
+      
+
 }
 
 
@@ -60,11 +65,19 @@
 /*Auth-nav*/
 
 .contacts {
-    display: none;
+
+        @include mq(mob-only) {
+            display: none;
+        }   
+
+         @include mq(tab-only) {
+             display: block;
+        }
 
 
-    // display: flex;
+    display: flex;
     margin-left: auto;
+
 
     & .item+.item {
             margin-left: 50px;

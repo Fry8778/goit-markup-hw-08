@@ -1,6 +1,11 @@
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include mq(desk) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+        }
 
 }
 
@@ -17,10 +22,3 @@
 }
 
 
-.section-people {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 94px;
-    padding-bottom: 94px;
-    background-color: var(--background-color);
-}

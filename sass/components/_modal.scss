@@ -2,7 +2,8 @@
     position: absolute;
 
     padding: 40px;
-    width: 528px;
+    width: 100%;
+    max-width: 450px;
     height: 581px;
     background-color: var(--primery-white-color);
     border-radius: 4px;
@@ -11,6 +12,11 @@
 
     transform: translate(-50%, -50%);
     transition: transform var(--transition);
+
+
+    @include mq(desk) {
+        max-width: 528px;
+    }
 
 }
 

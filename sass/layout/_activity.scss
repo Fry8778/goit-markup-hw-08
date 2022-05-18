@@ -1,11 +1,11 @@
 /*Наша деятельность*/
 
 .activity {
+ @include mq(no-desk)  {
+    display: none;
+ }
 
-
-    @media (max-width: 480px) {    
-        display: none;
-    }
+    
     
            
    
@@ -32,8 +32,16 @@
     padding: 27px;
 
 }
+&__list {
+    @include mq(desk) {
+           --card-item:3;
+        }
+}
+
 
 }
+
+
 
 
 
