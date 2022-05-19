@@ -13,6 +13,7 @@
 }
 
 :root {
+  --secondary-font-family: "Raleway";
   --primery-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196F3;
@@ -24,7 +25,6 @@
   --header-border-color: #ECECEC;
   --foter-background-color: #2F303A;
   --backdrop-background-color: rgba(0, 0, 0, 0.2);
-  --secondary-font-family: "Raleway";
   --transparent-color: rgba(255, 255, 255, 0.6);
   --filter-btn-box-shadow-color: 0px 3px 1px rgba(0, 0, 0, 0.1),
             0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -124,6 +124,7 @@ img {
 
 /*Main nav*/
 .main {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -170,6 +171,10 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .link {
@@ -466,6 +471,10 @@ button[data-modal-close].cross {
   }
 }
 
+.nav__link--current {
+  color: currentColor;
+}
+
 .nav__list {
   display: flex;
   margin-left: 92px;
@@ -641,6 +650,203 @@ button[data-modal-close].cross {
 
 .social-item:not(:last-child) {
   margin-right: 10px;
+}
+
+.container-mob {
+  outline: 1px solid red;
+  max-width: 480px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container-mob {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-mob {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-mobi {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.navi {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-mobi-contacts {
+    display: none;
+  }
+}
+
+.menu-btn {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+.icon-open:hover,
+.icon-open:focus {
+  fill: var(--accent-color);
+}
+
+.icon-close:hover,
+.icon-close:focus {
+  fill: var(--accent-color);
+}
+
+/**
+    |============================
+    | Робота з іконками відкриття/закриття
+    | кнопки мобільного меню
+    |============================
+  */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  padding: 48px 40px;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primery-white-color);
+  transition: var(--transition);
+}
+
+.mobile-menu .mobile-menu-link:hover,
+.mobile-menu .mobile-menu-link:focus {
+  color: var(--accent-color);
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu.is-open {
+  height: 100%;
+  transform: translateX(0);
+}
+
+.mobile-menu-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu-navi {
+  margin-bottom: auto;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+}
+
+.mobile-menu-navi .mobile-menu-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu-navi .mobile-menu-link {
+  color: currentColor;
+}
+
+.mobile-menu-contacts {
+  margin-bottom: 64px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: var(--primery-text-color);
+}
+
+.mobile-menu-contacts .mobile-menu-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu-contacts .mobile-menu-item:first-child .mobile-menu-link {
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 480px) {
+  .mobile-menu-contacts .mobile-menu-item:first-child .mobile-menu-link {
+    font-size: 34px;
+  }
+}
+
+.mobile-menu-contacts .mobile-menu-link {
+  color: currentColor;
+}
+
+.mobile-menu-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mobile-menu-navi .nav__link--current {
+  color: var(--accent-color);
+}
+
+.mobile-menu-socials .mobile-menu-link {
+  color: currentColor;
+}
+
+.mobile-menu-socials .mobile-menu-social:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.contacts__link-phone {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
 }
 
 @media (min-width: 768px) {
@@ -934,7 +1140,6 @@ button[data-modal-close].cross {
 }
 
 .header {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -945,7 +1150,7 @@ button[data-modal-close].cross {
   text-align: center;
   padding-top: 118px;
   padding-bottom: 118px;
-  background-color: #2F303A;
+  background-color: var(--foter-background-color);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

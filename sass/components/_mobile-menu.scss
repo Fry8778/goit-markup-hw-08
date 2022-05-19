@@ -1,99 +1,264 @@
-// .page-header .container {
-//     // position: relative;
 
-
-
-// }
-
-// .menu {
-//     display: flex;
-//     padding: 0;
-//     margin: 0;
-//     list-style: none;
-// }
-
-// @media (max-width: 767px) {
-//     .menu {
-//         display: none;
+    
+  
+  .container-mob {
+    outline: 1px solid red;
+    max-width: 480px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .container-mob {
+      max-width: 768px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .container-mob {
+      max-width: 1200px;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .menu-mobi {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  
+  .navi {
+    display: flex;
+    align-items: center;
+  }
+  
+//   .logo {
+//     font-family: "Raleway";
+//     font-weight: 700;
+//     font-size: 24px;
+//     line-height: 28px;
+//     letter-spacing: 0.03em;
+//     color: #2196f3;
+//   }
+  
+//   .logo span {
+//     color: #212121;
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .nav-list {
+//       display: none;
 //     }
-// }
+//   }
+  
+  @media screen and (max-width: 767px) {
+    .menu-mobi-contacts {
+      display: none;
+    }
+  }
+  
+  .menu-btn {
 
-// .menu .link {
-//     padding: 10px;
-//     color: inherit;
-//     text-decoration: none;
-// }
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;    
 
-// .menu .link:hover,
-// .menu .link:focus {
-//     text-decoration: underline;
-// }
+    @include mq(tab) {
+      display: none;      
+    } 
 
-// .menu-toggle {
-//     min-height: 40px;
-//     min-width: 40px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
+  }
 
-//     margin: 0;
-//     padding: 0;
-//     background-color: transparent;
-//     cursor: pointer;
-//     border: none;
-//     border-radius: 50%;
-//     outline: none;
-// }
+    .icon-open:hover,
+    .icon-open:focus {
+      fill: var(--accent-color);
+    }
 
-// @media (min-width: 768px) {
-//     .menu-toggle {
-//         display: none;
-//     }
-// }
+    .icon-close:hover,
+    .icon-close:focus {
+      fill: var(--accent-color);
+    }
+    
 
-// .menu-toggle:hover,
-// .menu-toggle:focus {
-//     background-color: rgba(0, 0, 0, 0.1);
-// }
 
-// .menu-container {
 
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100vw;
-//     height: 100vh;
-//     padding: 32px;
-//     background-color: #ffffff;
-//     z-index: 999;
+  
+  /**
+    |============================
+    | Робота з іконками відкриття/закриття
+    | кнопки мобільного меню
+    |============================
+  */
+  // .icon-open {
+  //   opacity: 1;
+  // }
+  
+  // .menu-btn.is-open .icon-open {
+  //   opacity: 0;
+  // }
+  
+  // .icon-close {
+  //   opacity: 0;
+  // }
+  
+  // .menu-btn.is-open .icon-close {
+  //   opacity: 1;
+  // }
+  
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    padding: 48px 40px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primery-white-color);
+    transition: var(--transition);
 
-//     transform: translateX(100%);
-//     transition: transform 250ms ease-in-out;
-// }
+    & .mobile-menu-link:hover,
+    & .mobile-menu-link:focus {
+      color: var(--accent-color);
+      
+    }
 
-// .menu-container.is-open {
-//     transform: translateX(0);
-// }
+    @include mq(tab) {
+      display: none;
+    }
 
-// .menu-container .menu-toggle {
-//     top: 100%;
-//     left: 0;
-//     width: 100%;
-//     position: absolute;
-//     top: 16px;
-//     right: 16px;
-//     color: #fff;
-// }
+  }
 
-// .mobile-menu {
-//     padding: 0;
-//     margin: 0;
-//     list-style: none;
-// }
+  // .mobile-menu-link {    
+  //   font-weight: 500;
+  //   font-size: 40px;
+  //   line-height: 1.18;
+  //   letter-spacing: 0.02em;
 
-// .mobile-menu .link {
-//     display: block;
-//     padding: 10px;
-//     color: #fff;
-//     text-decoration: none;
-// }
+  //   color: var(--title-text-color);
+  // }
+
+
+  
+  .mobile-menu.is-open {
+    height: 100%;
+    transform: translateX(0);
+  }
+  
+  .mobile-menu-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu-navi {
+    // margin-bottom: 302px;
+    margin-bottom: auto;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+  }
+  
+  .mobile-menu-navi .mobile-menu-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  
+  .mobile-menu-navi .mobile-menu-link {
+    color: currentColor;
+  }
+  
+  .mobile-menu-contacts {
+    margin-bottom: 64px;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: var(--primery-text-color);
+  }
+  
+  .mobile-menu-contacts .mobile-menu-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  
+  .mobile-menu-contacts .mobile-menu-item:first-child .mobile-menu-link {
+    color: var(--accent-color);
+  }
+  
+  @media screen and (min-width: 480px) {
+    .mobile-menu-contacts .mobile-menu-item:first-child .mobile-menu-link {
+      font-size: 34px;
+    }
+  }
+  
+  .mobile-menu-contacts .mobile-menu-link {
+    color: currentColor;
+  }
+  
+  .mobile-menu-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color:  var(--accent-color);
+  }
+
+
+  
+  .mobile-menu-navi .nav__link--current {
+    color: var(--accent-color);
+  }
+
+
+  .mobile-menu-socials .mobile-menu-link {
+    color: currentColor;
+  }
+  
+  .mobile-menu-socials .mobile-menu-social:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    
+  }
+
+  // .mobile-menu-navi {
+  //   margin-bottom: 302px;
+  // }
+
+ 
+
+  .contacts__link-phone {    
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;  
+    letter-spacing: 0.02em;   
+  }
+
+
+
+

@@ -7,7 +7,9 @@
 
 }
 
-
+.nav__link--current {
+    color: currentColor;
+}
 
 .nav__list {
     display: flex;

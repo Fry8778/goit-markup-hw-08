@@ -1,7 +1,4 @@
-.portfolio__list {
-    // @include mq(mob) {
-    //        --card-item: 1;
-    // }
+.portfolio__list {   
 
     @include mq(tab) {
         --card-item: 2;
