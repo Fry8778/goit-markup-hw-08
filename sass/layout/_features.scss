@@ -26,16 +26,24 @@
         margin-bottom: 30px;
         background-color: var(--background-color);
         border-radius: 4px;
-        border: 1px solid var(--border-icon-color);
+        // border: 1px solid var(--border-icon-color);
     }
 
     &__title {
+        text-align: center;
         margin-bottom: 10px;
         font-weight: 700;
-         font-size: 14px;
-         line-height: 1.14;
+        font-size: 14px;
+        line-height: 1.14;
         letter-spacing: 0.03em;
         color: var(--title-text-color);
+
+        
+            @include mq(tab) {
+               text-align: start;
+            }
+
+
         }
 
     &__text {

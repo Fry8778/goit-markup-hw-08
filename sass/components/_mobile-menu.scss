@@ -1,62 +1,47 @@
 
     
   
-  .container-mob {
-    outline: 1px solid red;
-    max-width: 480px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  // .container-mob {
+  //   outline: 1px solid red;
+  //   max-width: 480px;
+  //   padding-left: 15px;
+  //   padding-right: 15px;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
   
-  @media screen and (min-width: 768px) {
-    .container-mob {
-      max-width: 768px;
-    }
-  }
+  // @media screen and (min-width: 768px) {
+  //   .container-mob {
+  //     max-width: 768px;
+  //   }
+  // }
   
-  @media screen and (min-width: 1200px) {
-    .container-mob {
-      max-width: 1200px;
-    }
-  }
+  // @media screen and (min-width: 1200px) {
+  //   .container-mob {
+  //     max-width: 1200px;
+  //   }
+  // }
   
-  @media screen and (max-width: 767px) {
-    .menu-mobi {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
+  // @media screen and (max-width: 767px) {
+  //   .menu-mobi {
+  //     padding-top: 10px;
+  //     padding-bottom: 10px;
+  //   }
+  // }
   
+ 
+
+  
+  // @media screen and (max-width: 767px) {
+  //   .menu-mobi-contacts {
+  //     display: none;
+  //   }
+  // }
+
+
   .navi {
     display: flex;
     align-items: center;
-  }
-  
-//   .logo {
-//     font-family: "Raleway";
-//     font-weight: 700;
-//     font-size: 24px;
-//     line-height: 28px;
-//     letter-spacing: 0.03em;
-//     color: #2196f3;
-//   }
-  
-//   .logo span {
-//     color: #212121;
-//   }
-  
-//   @media screen and (max-width: 767px) {
-//     .nav-list {
-//       display: none;
-//     }
-//   }
-  
-  @media screen and (max-width: 767px) {
-    .menu-mobi-contacts {
-      display: none;
-    }
   }
   
   .menu-btn {
@@ -88,10 +73,7 @@
       fill: var(--accent-color);
     }
     
-
-
-
-  
+ 
   /**
     |============================
     | Робота з іконками відкриття/закриття
@@ -138,16 +120,6 @@
     }
 
   }
-
-  // .mobile-menu-link {    
-  //   font-weight: 500;
-  //   font-size: 40px;
-  //   line-height: 1.18;
-  //   letter-spacing: 0.02em;
-
-  //   color: var(--title-text-color);
-  // }
-
 
   
   .mobile-menu.is-open {
@@ -247,18 +219,30 @@
     
   }
 
-  // .mobile-menu-navi {
-  //   margin-bottom: 302px;
-  // }
-
- 
-
   .contacts__link-phone {    
     font-weight: 500;
-    font-size: 34px;
+    font-size: 26px;
     line-height: 1.18;  
-    letter-spacing: 0.02em;   
+    letter-spacing: 0.02em;  
+
+    @include mq(mob) {
+      font-size: 34px;
   }
+}
+
+  .contacts__link-info{  
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    @include mq(mob) {
+      font-size: 20px;
+    }
+
+}
+
+
 
 
 

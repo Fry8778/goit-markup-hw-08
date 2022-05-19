@@ -151,22 +151,33 @@
 
 .checkbox-text {
     font-weight: 400;
-    font-size: 14px;
-
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
-    line-height: 1;
     text-decoration: none;
+
+    @include mq(desk) {
+        font-size: 14px;
+        line-height: 1;
+
+    }
 
 }
 
 .check-text {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--primery-text-color);
+
+    @include mq(desk) {
+        font-size: 14px;
+        line-height: 1;
+
+    }
 
 }
 
