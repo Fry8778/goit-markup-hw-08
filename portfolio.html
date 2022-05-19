@@ -47,6 +47,52 @@
             </svg>+38 096 111 11 11</a>
         </li>
       </ul>
+
+      <button class="menu-btn" type="button" aria-label="кнопка отрытия меню" aria-expanded="false" data-menu-open>
+        <svg class="icon-open" width="24" height="24">
+          <use href="./images/sprite.svg#icon-menu-burger"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu" data-menu>
+        <button class="mobile-menu-close-btn" type="button" aria-label="кнопка закрытия меню" data-menu-close>
+          <svg class="icon-close" width="20" height="20">
+            <use href="./images/sprite.svg#icon-cross-menu"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu-navi">
+          <li class="mobile-menu-item">
+            <a href="./index.html" class="mobile-menu-link nav__link--current">Студия </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="./portfolio.html" class="mobile-menu-link ">Портфолио</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="@" class="mobile-menu-link contact-cont">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu-contacts">
+          <li class="mobile-menu-item">
+            <a href="tel:+380961111111" class="mobile-menu-link contacts__link-phone">+38 096 111 11 11</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="mailto:info@devstudio.com" class="mobile-menu-link contacts__link--info">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu-socials">
+          <li class="mobile-menu-social">
+            <a href="" class="mobile-menu-link">Instagram </a>
+          </li>
+          <li class="mobile-menu-social">
+            <a href="" class="mobile-menu-link">Twitter</a>
+          </li>
+          <li class="mobile-menu-social">
+            <a href="" class="mobile-menu-link">Facebook</a>
+          </li>
+          <li class="mobile-menu-social">
+            <a href="" class="mobile-menu-link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
   <main>
@@ -495,6 +541,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

@@ -153,6 +153,7 @@
   .mobile-menu.is-open {
     height: 100%;
     transform: translateX(0);
+    z-index: 10;
   }
   
   .mobile-menu-close-btn {
