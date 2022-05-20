@@ -73,6 +73,7 @@
 
 
     &-icon-check {
+        position: relative;
         flex-shrink: 0;
         display: inline-block;
         width: 15px;
@@ -92,9 +93,7 @@
 
         .check-input:checked+& {
             border-color: transparent;
-            background-color: var(--accent-color);
-            background-image: url("../images/last-vector.svg");
-            /* background-size: 11px 8px; */
+            background-color: var(--accent-color);            
             background-origin: border-box;
             background-position: center;
             background-repeat: no-repeat;
@@ -103,11 +102,6 @@
     }
 
 }
-
-
-
-
-
 
 .form-label-wrap {
     margin-bottom: 20px;
@@ -151,33 +145,50 @@
 
 .checkbox-text {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
     text-decoration: none;
 
+    @include mq(mob) {
+        font-size: 12px;
+        line-height: 1.17;
+
+    }
+
     @include mq(desk) {
         font-size: 14px;
         line-height: 1;
 
     }
+   
+
+
 
 }
 
 .check-text {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--primery-text-color);
+
+    @include mq(mob) {
+        font-size: 12px;
+        line-height: 1.17;
+
+    }
 
     @include mq(desk) {
         font-size: 14px;
         line-height: 1;
 
     }
+   
+
 
 }
 
@@ -190,4 +201,13 @@
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+.last-vector {
+    position: absolute;
+    content: "";
+    top: 40%;
+    left: 38%;
+    transform: translate(-50%, -50%);  
+   
 }

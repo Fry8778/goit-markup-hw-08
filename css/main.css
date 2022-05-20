@@ -311,6 +311,7 @@ a {
 }
 
 .form-icon-check {
+  position: relative;
   flex-shrink: 0;
   display: inline-block;
   width: 15px;
@@ -329,8 +330,6 @@ a {
 .check-input:checked + .form-icon-check {
   border-color: transparent;
   background-color: var(--accent-color);
-  background-image: url("../images/last-vector.svg");
-  /* background-size: 11px 8px; */
   background-origin: border-box;
   background-position: center;
   background-repeat: no-repeat;
@@ -376,12 +375,19 @@ a {
 
 .checkbox-text {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
   text-decoration: none;
+}
+
+@media (min-width: 480px) {
+  .checkbox-text {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -393,10 +399,17 @@ a {
 
 .check-text {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--primery-text-color);
+}
+
+@media (min-width: 480px) {
+  .check-text {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -415,6 +428,14 @@ a {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.last-vector {
+  position: absolute;
+  content: "";
+  top: 40%;
+  left: 38%;
+  transform: translate(-50%, -50%);
 }
 
 /*ICON-SPRITE*/
@@ -530,12 +551,12 @@ button[data-modal-close].cross {
 }
 
 .nav__list .nav__link.nav__link--current::after {
+  position: absolute;
   content: "";
   display: block;
   width: 100%;
   height: 4px;
   background-color: var(--accent-color);
-  position: absolute;
   bottom: -3px;
   border-radius: 2px;
 }
@@ -846,14 +867,15 @@ button[data-modal-close].cross {
 
 .contacts__link-info {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 1.17;
+  font-size: 20px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
 }
 
 @media (min-width: 480px) {
   .contacts__link-info {
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 1.18;
   }
 }
 
